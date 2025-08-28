@@ -1,0 +1,42 @@
+function mainFunc(){
+    const form = document.querySelector('.form')
+    const resultado = document.querySelector('.resultado')
+    function calculaIMC(altura,peso){
+        const valorDOIMC = (peso)/(altura*altura)
+        if (valorDOIMC<18.5){
+            return "Abaixo do Peso"
+        }
+        else if (18.5<=valorDOIMC && valorDOIMC<=24.9){
+            return "normal"
+        }
+         else if (25<=valorDOIMC && valorDOIMC<=29.9){
+            return "Sobrepeso"
+        }
+         else if (30<=valorDOIMC && valorDOIMC<=34.9){
+            return "Obesidade grau 1"
+        }
+         else if (35<=valorDOIMC && valorDOIMC<=39.9){
+            return "Obesidade grau 2"
+        }
+         else if (40<=valorDOIMC){
+            return "Obesidade grau 3"
+        }
+        else{
+            return "Digite um valor válido"
+        }
+    }
+    function escutadorDoSubmit(evento){
+        evento.preventDefault();
+       
+        const alturaParaIMC = Number(form.querySelector('#altura').value)
+        const pesoParaIMC = Number(form.querySelector('#peso').value)
+
+        const IMC = calculaIMC(alturaParaIMC, pesoParaIMC)
+        console.log(IMC)
+        resultado.innerHTML = " "
+        resultado.innerHTML += `Você está com IMC ${IMC} `
+        console.log(pesoParaIMC/(alturaParaIMC*alturaParaIMC))
+    }
+    form.addEventListener('submit', escutadorDoSubmit)
+}
+mainFunc();
