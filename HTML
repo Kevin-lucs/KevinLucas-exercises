@@ -1,0 +1,69 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Titulo</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <section class="countainer">
+            <h1>Indice de Massa Corporal(IMC) </h1>
+            
+            <div class="linha">
+                <h2><span>IMC</span></h2>
+                <h2><span>Resultado</span></h2>
+            </div>
+
+            <div class="linha">
+                <p><span>Menor que 18,5</span></p>
+                <p><span>Abaixo do peso</span></p>
+            </div>
+
+            <div class="linha">
+                <p><span>Entre 18,5 e 24,9</span></p>
+                <p><span>Peso Normal</span></p>
+            </div>
+
+            <div class="linha">
+                <p><span>Entre 25 e 29,9</span></p>
+                <p><span>Sobrepeso</span></p>
+            </div>
+
+            <div class="linha">
+                <p><span>Entre 30 e 34,9</span></p>
+                <p><span>Obesidade grau 1</span></p>
+            </div>
+
+            <div class="linha">
+                <p><span>Entre 35 e 39,9</span></p>
+                <p><span>Obesidade grau 2</span></p>
+            </div>
+
+            <div class="linha">
+                <p><span>Acima de 40</span></p>
+                <p><span>Obesidade grau 3</span></p>
+            </div>
+
+            <h1>Calcule seu IMC</h1>
+
+            <form action="" class="form">
+
+                <label for="peso">Peso:</label>
+                <input type="number" id="peso" step="0.01">
+
+                <label for="altura">Altura:</label>
+                <input type="number" id="altura" step="0.01">
+
+                <button type="submit">Enviar</button>
+
+            </form>
+            <div class="resultado"></div>
+        </section>
+
+        <script src="logica.js"></script>
+    </body>
+
+    </html>
